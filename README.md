@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wedding Wish Project
+
+This project is a simple wedding wish application built with Next.js 14, featuring server-side actions and MongoDB for data storage.
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to get your project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm (usually comes with Node.js)
+- MongoDB URI
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone [repository_url]
+   cd wedding-wish
+
+   ```
+
+1. Install dependencies
+
+Navigate to the project directory and run:
+
+```
+bash
+
+npm install
+```
+
+2. Set up the environment variables
+
+Create a .env.local file in the root directory of the project and add your MongoDB URI:
+
+```
+MONGO_URL=mongodb+srv://[your_mongodb_uri]
+```
+
+Replace [your_mongodb_uri] with your actual MongoDB connection string.
+
+3. Run the development server
+
+Start the development server using the following command:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Folder Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Here is an overview of the folder structure:
 
-## Learn More
+```
+wedding-wish
+├─ .env.local
+├─ .gitignore
+├─ next/
+├─ app/
+│  ├─ actions/
+│  │  └─ wishAction.js
+│  ├─ components/
+│  │  ├─ WishForm.js
+│  │  └─ WishList.js
+│  ├─ models/
+│  │  └─ Wish.js
+│  ├─ lib/
+│  │  ├─ db.js
+│  │  └─ datafromdb.js
+│  ├─ globals.css
+│  ├─ layout.js
+│  └─ page.js
+├─ node_modules/
+├─ public/
+│  └─ favicon.ico
+└─ ...
+```
 
-To learn more about Next.js, take a look at the following resources:
+### How to Use
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+After starting the development server, navigate to the main page to see the wedding wish form. Users can submit their wishes, which will be displayed in a list below the form.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Contributing
 
-## Deploy on Vercel
+If you'd like to contribute to the project, please fork the repository and create a pull request with your changes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is open source and available under the MIT License.
